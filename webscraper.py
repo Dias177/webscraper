@@ -12,11 +12,11 @@ soup = BeautifulSoup(page, 'html.parser')
 
 ticker = soup.find("h1", attrs={"style": "text-transform: none;"})
 ticker = ticker.text.strip()
-print(ticker)
+
 
 price = soup.find("div", attrs={"class": "h1-block__indicator"})
 price = price.text.strip()
-print(price)
+print("Price of " + stock_ticker + ": " + price)
 
 with open('stock.csv', 'a') as csv_file:
     writer = csv.writer(csv_file)
