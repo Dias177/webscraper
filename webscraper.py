@@ -1,11 +1,12 @@
-# import packages to access and process a web page
-# and then to collect the data
 import urllib
 import csv
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-url = 'http://kase.kz/ru/shares/show/KZTO/'
+
+stock_ticker = input("Enter a stock ticker: ")
+
+url = 'http://kase.kz/ru/shares/show/' + stock_ticker + '/'
 page = urllib.request.urlopen(url)
 soup = BeautifulSoup(page, 'html.parser')
 
