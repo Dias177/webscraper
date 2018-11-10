@@ -1,6 +1,9 @@
 from stock import Stock
+import lst
 
-stock = Stock(input("Enter a stock ticker: "))
+print("Most liquid stocks: ")
+print(lst.most_liquid())
+stock = Stock(input("Enter a stock ticker from the list above: "))
 try:
     stock.find_price()
     stock.append_data()
