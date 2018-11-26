@@ -29,5 +29,8 @@ class Stock:
             writer = csv.writer(csv_file)
             writer.writerow([self.ticker, self.price, datetime.now()])
 
+    def __repr__(self):
+        return "{} {} kzt".format(self.ticker, self.price)
+
     def __str__(self):
-        return "Price of " + self.ticker + ": " + self.price
+        return "Price of " + self.ticker + ": " + str(self.price)
